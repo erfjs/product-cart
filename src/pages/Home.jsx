@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import Gradients from "../components/Gradients";
 import ProductImages from "../components/ProductImages";
 import Info from "../components/Info/Info";
@@ -24,18 +25,18 @@ const Home = () => {
     );
 
     // showing correct color
-    colors.forEach(color => color.classList.remove("active"));
+    colors.forEach((color) => color.classList.remove("active"));
     this.classList.add("active");
 
     // changing primary css variable
     document.documentElement.style.setProperty("--primary", primary);
 
     // showing correct img
-    shoes.forEach(s => s.classList.remove("show"));
+    shoes.forEach((s) => s.classList.remove("show"));
     shoe.classList.add("show");
 
     // dealing with gradient
-    gradients.forEach(g => g.classList.remove("display", "behind"));
+    gradients.forEach((g) => g.classList.remove("display", "behind"));
     prevGradient.classList.add("behind");
     gradient.classList.add("display");
 
@@ -50,7 +51,7 @@ const Home = () => {
   }
 
   function changeSize() {
-    sizes.forEach(size => size.classList.remove("active"));
+    sizes.forEach((size) => size.classList.remove("active"));
     this.classList.add("active");
   }
 
@@ -82,23 +83,23 @@ const Home = () => {
     gradients = document.querySelectorAll(".gradient");
     shoeBackground = document.querySelector(".shoeBackground");
 
-    colors.forEach(color => color.addEventListener("click", changeColor));
-    sizes.forEach(size => size.addEventListener("click", changeSize));
+    colors.forEach((color) => color.addEventListener("click", changeColor));
+    sizes.forEach((size) => size.addEventListener("click", changeSize));
     changeHeight();
   }, []);
   window.addEventListener("resize", changeHeight);
 
   return (
-    <div className="Home">
-      <div className="container">
-        <div className="card">
-          <div className="shoeBackground">
+    <div className='Home'>
+      <div className='container'>
+        <div className='card'>
+          <div className='shoeBackground'>
             <Gradients />
 
-            <h1 className="nike">nike</h1>
-            <img src={logo} alt="logo" className="logo" />
-            <a href="/#" className="share">
-              <i className="fas fa-share-alt"></i>
+            <h1 className='nike'>nike</h1>
+            <img src={logo} alt='logo' className='logo' />
+            <a href='/#' className='share'>
+              <i className='fas fa-share-alt'></i>
             </a>
 
             <ProductImages />
