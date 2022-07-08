@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const Info = () => {
   const shoeName = (
     <div className='shoeName'>
       <div>
-        <h1 className='big'>Nike Zoom KD 12</h1>
+        <h1 className='big'>Nike Zoom Air</h1>
         <span className='new'>new</span>
       </div>
       <h3 className='small'>Men's running shoes</h3>
@@ -21,15 +22,45 @@ const Info = () => {
     </div>
   );
 
+  const [colorMeta, setColorMeta] = useState("#2175f5");
+
   const ColorContainer = (
     <div className='color-container'>
+      <Helmet>
+        <meta name='theme-color' content={colorMeta} />
+      </Helmet>
       <h3 className='title'>Color</h3>
       <div className='colors'>
-        <span className='color active' primary='#2175f5' color='blue'></span>
-        <span className='color' primary='#f84848' color='red'></span>
-        <span className='color' primary='#29b864' color='green'></span>
-        <span className='color' primary='#ff5521' color='orange'></span>
-        <span className='color' primary='#444' color='black'></span>
+        <span
+          onClick={() => setColorMeta("#2175f5")}
+          className='color active'
+          primary='#2175f5'
+          color='blue'
+        ></span>
+        <span
+          onClick={() => setColorMeta("#f84848")}
+          className='color'
+          primary='#f84848'
+          color='red'
+        ></span>
+        <span
+          onClick={() => setColorMeta("#29b864")}
+          className='color'
+          primary='#29b864'
+          color='green'
+        ></span>
+        <span
+          onClick={() => setColorMeta("#ff5521")}
+          className='color'
+          primary='#ff5521'
+          color='orange'
+        ></span>
+        <span
+          onClick={() => setColorMeta("#444")}
+          className='color'
+          primary='#444'
+          color='black'
+        ></span>
       </div>
     </div>
   );
