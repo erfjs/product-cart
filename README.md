@@ -1,4 +1,4 @@
-# React Todo List
+# React Product Cart
 A Product Cart app powered by React, >>> PWA <<<
 
 ##### [Live Demo](https://product-cart.erfjs.com/) on Netlify
