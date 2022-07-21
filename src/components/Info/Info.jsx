@@ -8,7 +8,7 @@ const Info = () => {
         <h1 className='big'>Nike Zoom Air</h1>
         <span className='new'>new</span>
       </div>
-      <h3 className='small'>Men's running shoes</h3>
+      <h2 className='small'>Men's running shoes</h2>
     </div>
   );
 
@@ -24,6 +24,10 @@ const Info = () => {
 
   const [colorMeta, setColorMeta] = useState("#2175f5");
 
+  const setColorFunc = (color) => {
+    setTimeout(()=>setColorMeta(color),680);
+  };
+
   const ColorContainer = (
     <div className='color-container'>
       <Helmet>
@@ -32,31 +36,32 @@ const Info = () => {
       <h3 className='title'>Color</h3>
       <div className='colors'>
         <span
-          onClick={() => setColorMeta("#2175f5")}
+          onClick={() => setColorFunc("#2175f5")}
           className='color active'
           primary='#2175f5'
           color='blue'
         ></span>
         <span
-          onClick={() => setColorMeta("#f84848")}
+          onClick={() => setColorFunc("#ff5521")}
           className='color'
-          primary='#f84848'
-          color='red'
+          primary='#ff5521'
+          color='orange'
         ></span>
+
         <span
-          onClick={() => setColorMeta("#29b864")}
+          onClick={() => setColorFunc("#29b864")}
           className='color'
           primary='#29b864'
           color='green'
         ></span>
         <span
-          onClick={() => setColorMeta("#ff5521")}
+          onClick={() => setColorFunc("#f84848")}
           className='color'
-          primary='#ff5521'
-          color='orange'
+          primary='#f84848'
+          color='red'
         ></span>
         <span
-          onClick={() => setColorMeta("#444")}
+          onClick={() => setColorFunc("#444")}
           className='color'
           primary='#444'
           color='black'

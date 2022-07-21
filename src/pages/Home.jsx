@@ -109,9 +109,9 @@ const Home = () => {
 
             <h1 className='nike'>nike</h1>
             <img src={logo} alt='logo' className='logo' />
-            <a href='/#' className='share'>
+            <div className='share'>
               <i className='fas fa-share-alt'></i>
-            </a>
+            </div>
 
             <ProductImages />
           </div>
