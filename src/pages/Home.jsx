@@ -3,7 +3,7 @@ import Gradients from "../components/Gradients";
 import ProductImages from "../components/ProductImages";
 import Info from "../components/Info/Info";
 
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo.webp";
 
 const Home = () => {
   var shoeHeight;
